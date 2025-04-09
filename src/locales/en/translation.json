@@ -1,0 +1,21 @@
+{
+  "your_account": "Your Account",
+  "welcome_logged_in": "Welcome, you are logged in!",
+  "logout": "Logout",
+  "logged_out": "You have been logged out.",
+  "logout_error": "Error logging out: {{error}}",
+  "login": "Login",
+  "email_placeholder": "Enter your email",
+  "password_placeholder": "Enter your password",
+  "login_button": "Login",
+  "login_success": "Login successful",
+  "login_failed": "Login failed: {{error}}",
+  "register": "Register",
+  "registration_success": "Registration successful",
+  "registration_failed": "Registration failed: {{error}}",
+  "empty_fields_error": "Email and password cannot be empty",
+  "invalid_email_error": "Please enter a valid email address",
+  "register_button": "Register",
+  "go_to_register": "Go to Register",
+  "go_to_login": "Go to Login"
+}

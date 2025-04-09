@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../../firebase'; 
+import { auth } from '../../firebase';
+import { useTranslation } from 'react-i18next';
 
 function Register() {
+  const { t } = useTranslation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -12,43 +14,43 @@ function Register() {
     setError('');
 
     if (!email || !password) {
-      setError('Please enter both email and password.');
+      setError(t('empty_fields_error'));
       return;
     }
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
-      setError('Please enter a valid email address.');
+      setError(t('invalid_email_error'));
       return;
     }
 
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       console.log('User registered:', userCredential);
-      alert('Registration successful');
+      alert(t('registration_success'));
     } catch (err) {
-      setError('Registration failed: ' + err.message);
+      setError(t('registration_failed', { error: err.message }));
     }
   };
 
   return (
     <div className="Register">
-      <h2>Register</h2>
+      <h2>{t('register')}</h2>
       <form onSubmit={handleRegister}>
         <input
           type="email"
-          placeholder="Enter your email"
+          placeholder={t('email_placeholder')}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="password"
-          placeholder="Enter your password"
+          placeholder={t('password_placeholder')}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
         {error && <p>{error}</p>}
-        <button type="submit">Register</button>
+        <button type="submit">{t('register_button')}</button>
       </form>
     </div>
   );

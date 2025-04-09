@@ -1,0 +1,21 @@
+{
+  "your_account": "Votre compte",
+  "welcome_logged_in": "Bienvenue, vous êtes connecté !",
+  "logout": "Se déconnecter",
+  "logged_out": "Vous avez été déconnecté.",
+  "logout_error": "Erreur de déconnexion : {{error}}",
+  "login": "Se connecter",
+  "email_placeholder": "Entrez votre email",
+  "password_placeholder": "Entrez votre mot de passe",
+  "login_button": "Se connecter",
+  "login_success": "Connexion réussie",
+  "login_failed": "Échec de la connexion : {{error}}",
+  "register": "S'inscrire",
+  "registration_success": "Inscription réussie",
+  "registration_failed": "Échec de l'inscription : {{error}}",
+  "empty_fields_error": "L'email et le mot de passe ne peuvent pas être vides",
+  "invalid_email_error": "Veuillez entrer une adresse email valide",
+  "register_button": "S'inscrire",
+  "go_to_register": "Aller à l'inscription",
+  "go_to_login": "Aller à la connexion"
+}

@@ -1,0 +1,21 @@
+{
+  "your_account": "您的账户",
+  "welcome_logged_in": "欢迎，您已登录！",
+  "logout": "登出",
+  "logged_out": "您已登出。",
+  "logout_error": "登出失败：{{error}}",
+  "login": "登录",
+  "email_placeholder": "请输入您的电子邮件",
+  "password_placeholder": "请输入您的密码",
+  "login_button": "登录",
+  "login_success": "登录成功",
+  "login_failed": "登录失败：{{error}}",
+  "register": "注册",
+  "registration_success": "注册成功",
+  "registration_failed": "注册失败：{{error}}",
+  "empty_fields_error": "电子邮件和密码不能为空",
+  "invalid_email_error": "请输入有效的电子邮件地址",
+  "register_button": "注册",
+  "go_to_register": "去注册",
+  "go_to_login": "去登录"
+}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next'; 
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../firebase';
 import Login from './accounts/Login';
@@ -6,6 +7,7 @@ import Register from './accounts/Register';
 import Account from './accounts/Account';
 
 function Home() {
+  const { t } = useTranslation();
   const [user, setUser] = useState(null);
   const [isLogin, setIsLogin] = useState(true);
   const [loading, setLoading] = useState(true); 
@@ -27,8 +29,8 @@ function Home() {
     return (
       <div className="Home">
         <header className="Home-header">
-          <h1>Welcome to the Pokemon Fun App!</h1>
-          <div className="loading-spinner">Loading...</div>
+          <h1>{t('welcome')}</h1> 
+          <div className="loading-spinner">{t('loading')}</div> 
         </header>
       </div>
     );
@@ -37,8 +39,8 @@ function Home() {
   return (
     <div className="Home">
       <header className="Home-header">
-        <h1>Welcome to the Pokemon Fun App!</h1>
-        
+        <h1>{t('welcome')}</h1> 
+
         {user ? (
           <Account />
         ) : (
@@ -51,7 +53,7 @@ function Home() {
 
         {!user && (
           <button onClick={() => setIsLogin(!isLogin)}>
-            {isLogin ? 'Go to Register' : 'Go to Login'}
+            {isLogin ? t('go_to_register') : t('go_to_login')} 
           </button>
         )}
       </header>
