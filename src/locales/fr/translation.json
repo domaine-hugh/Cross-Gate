@@ -1,9 +1,9 @@
 {
   "your_account": "Votre compte",
   "welcome_logged_in": "Bienvenue, vous êtes connecté !",
-  "logout": "Se déconnecter",
+  "logout": "Déconnexion",
   "logged_out": "Vous avez été déconnecté.",
-  "logout_error": "Erreur de déconnexion : {{error}}",
+  "logout_error": "Erreur lors de la déconnexion : {{error}}",
   "login": "Se connecter",
   "email_placeholder": "Entrez votre email",
   "password_placeholder": "Entrez votre mot de passe",
@@ -17,5 +17,11 @@
   "invalid_email_error": "Veuillez entrer une adresse email valide",
   "register_button": "S'inscrire",
   "go_to_register": "Aller à l'inscription",
-  "go_to_login": "Aller à la connexion"
+  "go_to_login": "Aller à la connexion",
+  "forgot_password": "Mot de passe oublié ?",
+  "reset_password": "Réinitialiser votre mot de passe",
+  "send_reset_link": "Envoyer le lien de réinitialisation",
+  "cancel": "Annuler",
+  "password_reset_email_sent": "Un email de réinitialisation de mot de passe a été envoyé.",
+  "reset_password_failed": "Erreur lors de la réinitialisation du mot de passe : {{error}}"
 }

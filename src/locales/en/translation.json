@@ -17,5 +17,11 @@
   "invalid_email_error": "Please enter a valid email address",
   "register_button": "Register",
   "go_to_register": "Go to Register",
-  "go_to_login": "Go to Login"
+  "go_to_login": "Go to Login",
+  "forgot_password": "Forgot Password?",
+  "reset_password": "Reset Your Password",
+  "send_reset_link": "Send Reset Link",
+  "cancel": "Cancel",
+  "password_reset_email_sent": "A password reset email has been sent.",
+  "reset_password_failed": "Error resetting password: {{error}}"
 }

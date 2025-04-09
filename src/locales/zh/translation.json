@@ -1,9 +1,9 @@
 {
   "your_account": "您的账户",
   "welcome_logged_in": "欢迎，您已登录！",
-  "logout": "登出",
-  "logged_out": "您已登出。",
-  "logout_error": "登出失败：{{error}}",
+  "logout": "注销",
+  "logged_out": "您已注销。",
+  "logout_error": "注销错误：{{error}}",
   "login": "登录",
   "email_placeholder": "请输入您的电子邮件",
   "password_placeholder": "请输入您的密码",
@@ -17,5 +17,11 @@
   "invalid_email_error": "请输入有效的电子邮件地址",
   "register_button": "注册",
   "go_to_register": "去注册",
-  "go_to_login": "去登录"
+  "go_to_login": "去登录",
+  "forgot_password": "忘记密码？",
+  "reset_password": "重置您的密码",
+  "send_reset_link": "发送重置链接",
+  "cancel": "取消",
+  "password_reset_email_sent": "已发送密码重置邮件。",
+  "reset_password_failed": "重置密码失败：{{error}}"
 }
