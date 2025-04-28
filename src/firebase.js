@@ -3,13 +3,13 @@ import { getAuth, setPersistence, browserLocalPersistence } from "firebase/auth"
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDiX4h3spju_dHfW_IAnov5-JkzWAEfaJM",
-  authDomain: "pokemon-fun-669cb.firebaseapp.com",
-  projectId: "pokemon-fun-669cb",
-  storageBucket: "pokemon-fun-669cb.firebasestorage.app",
-  messagingSenderId: "837100025993",
-  appId: "1:837100025993:web:058cf171468994d5982e58",
-  measurementId: "G-47EL3P7W1K",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
