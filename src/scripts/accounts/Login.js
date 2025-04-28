@@ -16,17 +16,17 @@ function Login() {
     setError('');
 
     if (!email || !password) {
-      setError(t('empty_fields_error'));
+      setError(t('account.empty_fields_error'));
       return;
     }
 
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       console.log('Login successful:', userCredential);
-      alert(t('login_success'));
+      alert(t('account.login_success'));
     } catch (err) {
       console.error('Login failed:', err);
-      setError(t('login_failed', { error: err.message }));
+      setError(t('account.login_failed', { error: err.message }));
     }
   };
 
@@ -35,62 +35,62 @@ function Login() {
     setError('');
 
     if (!resetEmail) {
-      setError(t('empty_fields_error'));
+      setError(t('account.empty_fields_error'));
       return;
     }
 
     try {
       await sendPasswordResetEmail(auth, resetEmail);
-      alert(t('password_reset_email_sent'));
+      alert(t('account.password_reset_email_sent'));
       setShowResetPassword(false); 
     } catch (err) {
       console.error('Password reset failed:', err);
-      setError(t('reset_password_failed', { error: err.message }));
+      setError(t('account.reset_password_failed', { error: err.message }));
     }
   };
 
   return (
     <div className="Login">
-      <h2>{t('login')}</h2>
+      <h2>{t('account.login')}</h2>
       <form onSubmit={handleLogin}>
         <input
           type="email"
-          placeholder={t('email_placeholder')}
+          placeholder={t('account.email_placeholder')}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="password"
-          placeholder={t('password_placeholder')}
+          placeholder={t('account.password_placeholder')}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
         {error && <p>{error}</p>}
-        <button type="submit">{t('login_button')}</button>
+        <button type="submit">{t('account.login_button')}</button>
       </form>
 
       <button
         type="button"
         onClick={() => setShowResetPassword(true)}
       >
-        {t('forgot_password')}
+        {t('account.forgot_password')}
       </button>
 
       {showResetPassword && (
         <div className="resetPasswordForm">
-          <h3>{t('reset_password')}</h3>
+          <h3>{t('account.reset_password')}</h3>
           <form onSubmit={handlePasswordReset}>
             <input
               type="email"
-              placeholder={t('email_placeholder')}
+              placeholder={t('account.email_placeholder')}
               value={resetEmail}
               onChange={(e) => setResetEmail(e.target.value)}
             />
             {error && <p>{error}</p>}
-            <button type="submit">{t('send_reset_link')}</button>
+            <button type="submit">{t('account.send_reset_link')}</button>
           </form>
           <button onClick={() => setShowResetPassword(false)}>
-            {t('cancel')}
+            {t('account.cancel')}
           </button>
         </div>
       )}

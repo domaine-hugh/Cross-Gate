@@ -14,43 +14,43 @@ function Register() {
     setError('');
 
     if (!email || !password) {
-      setError(t('empty_fields_error'));
+      setError(t('account.empty_fields_error'));
       return;
     }
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
-      setError(t('invalid_email_error'));
+      setError(t('account.invalid_email_error'));
       return;
     }
 
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       console.log('User registered:', userCredential);
-      alert(t('registration_success'));
+      alert(t('account.registration_success'));
     } catch (err) {
-      setError(t('registration_failed', { error: err.message }));
+      setError(t('account.registration_failed', { error: err.message }));
     }
   };
 
   return (
     <div className="Register">
-      <h2>{t('register')}</h2>
+      <h2>{t('account.register')}</h2>
       <form onSubmit={handleRegister}>
         <input
           type="email"
-          placeholder={t('email_placeholder')}
+          placeholder={t('account.email_placeholder')}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="password"
-          placeholder={t('password_placeholder')}
+          placeholder={t('account.password_placeholder')}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
         {error && <p>{error}</p>}
-        <button type="submit">{t('register_button')}</button>
+        <button type="submit">{t('account.register_button')}</button>
       </form>
     </div>
   );
